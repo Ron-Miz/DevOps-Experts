@@ -1,4 +1,4 @@
-properties(pipelineTriggers([pollSCM('* * * * *')])])
+properties([[$class: 'JobLocalConfiguration', changeReasonComment: ''], pipelineTriggers([pollSCM('* * * * *')])])
 node {
     stage("1") {
         git branch: "master", url: "https://github.com/Ron-Miz/DevOps-Experts.git"
